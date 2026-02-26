@@ -138,6 +138,18 @@ writesonic write meta       --title "My Blog Post" --desc "About AI tools"
 writesonic write conclusion --topic "The future of AI in content creation"
 ```
 
+### `update` — Self-update
+
+Pull the latest source from GitHub, rebuild, and replace the current binary.
+
+```bash
+writesonic update
+```
+
+Requires `git` and `go` to be installed.
+
+---
+
 ## Output Modes
 
 Output is auto-detected:
