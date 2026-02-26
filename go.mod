@@ -1,4 +1,4 @@
-module github.com/vincentmaurin/writesonic-cli
+module github.com/the20100/writesonic-cli
 
 go 1.22
 

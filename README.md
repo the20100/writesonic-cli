@@ -5,13 +5,13 @@ A command-line interface for the [Writesonic API](https://docs.writesonic.com/re
 ## Installation
 
 ```bash
-go install github.com/vincentmaurin/writesonic-cli@latest
+go install github.com/the20100/writesonic-cli@latest
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/vincentmaurin/writesonic-cli
+git clone https://github.com/the20100/writesonic-cli
 cd writesonic-cli
 go build -o writesonic .
 sudo mv writesonic /usr/local/bin/

@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/vincentmaurin/writesonic-cli/internal/api"
-	"github.com/vincentmaurin/writesonic-cli/internal/config"
+	"github.com/the20100/writesonic-cli/internal/api"
+	"github.com/the20100/writesonic-cli/internal/config"
 )
 
 var (

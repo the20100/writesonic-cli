@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/vincentmaurin/writesonic-cli/cmd"
+	"github.com/the20100/writesonic-cli/cmd"
 )
 
 func main() {

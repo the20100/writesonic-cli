@@ -5,7 +5,7 @@ import (
 	"net/url"
 
 	"github.com/spf13/cobra"
-	"github.com/vincentmaurin/writesonic-cli/internal/output"
+	"github.com/the20100/writesonic-cli/internal/output"
 )
 
 // copy.go contains PAS, AIDA, CTA, and bullet-point-answers commands.
