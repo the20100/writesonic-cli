@@ -29,7 +29,7 @@ Generate blog ideas, articles, landing pages, and more from your terminal.
 
 Authentication:
   Set your API key with:  writesonic auth set-key <your-key>
-  Or via environment var: WRITESONIC_API_KEY=<your-key>`,
+  Or via environment var: WRITESONIC_API_KEY=<your-key> (or aliases: WRITESONIC_KEY, WRITESONIC_API, ...)`,
 	SilenceUsage: true,
 }
 
@@ -90,9 +90,22 @@ func init() {
 	}
 }
 
+// resolveEnv returns the value of the first non-empty environment variable from the given names.
+func resolveEnv(names ...string) string {
+	for _, name := range names {
+		if v := os.Getenv(name); v != "" {
+			return v
+		}
+	}
+	return ""
+}
+
 func resolveAPIKey() string {
-	if v := os.Getenv("WRITESONIC_API_KEY"); v != "" {
-		return v
+	if k := resolveEnv(
+		"WRITESONIC_API_KEY", "WRITESONIC_KEY", "WRITESONIC_API", "API_KEY_WRITESONIC", "API_WRITESONIC", "WRITESONIC_PK", "WRITESONIC_PUBLIC",
+		"WRITESONIC_API_SECRET", "WRITESONIC_SECRET_KEY", "WRITESONIC_API_SECRET_KEY", "WRITESONIC_SECRET", "SECRET_WRITESONIC", "API_SECRET_WRITESONIC", "SK_WRITESONIC", "WRITESONIC_SK",
+	); k != "" {
+		return k
 	}
 	if cfg != nil && cfg.APIKey != "" {
 		return cfg.APIKey
